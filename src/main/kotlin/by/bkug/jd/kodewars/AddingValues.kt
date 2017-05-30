@@ -48,5 +48,13 @@ package by.bkug.jd.kodewars
  * I have created other katas. Have a look if you like coding and challenges.
  */
 fun addingShifted(arrays: Array<IntArray>, shift: Int): IntArray {
-    TODO("3 Points")
+    var size = arrays[0].size
+    var newSize = size + (shift * (arrays.size - 1))
+    var result = IntArray(newSize)
+    for (i in arrays.indices){
+        for (j in arrays[i].indices){
+            result[(i * shift) + j] += arrays[i][j]
+        }
+    }
+    return result
 }
