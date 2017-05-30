@@ -19,5 +19,11 @@ package by.bkug.jd.kodewars
  * race(80, 91, 37) => [3, 21, 49]
  */
 fun race(v1: Int, v2: Int, g: Int): IntArray {
-    TODO("2 point")
+    val hour = 1.0 * g / (v2 - v1)
+    val h = Math.floor(hour).toInt()
+    val minute = (hour - hour.toInt()) * 60
+    val mn = Math.floor(minute).toInt()
+    val second = (minute - minute.toInt()) * 60
+    val s = Math.floor(second).toInt()
+    return intArrayOf(h, mn, s);
 }
