@@ -16,5 +16,5 @@ package by.bkug.jd.kodewars
  * longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
  */
 fun longest(s1: String, s2: String): String {
-    TODO("1 Point")
+    return String((s1 + s2).toCharArray().distinct().sorted().toCharArray())
 }
