@@ -30,5 +30,13 @@ package by.bkug.jd.kodewars
  * The input array should not be modified!
  */
 fun foldArray(array: IntArray, runs: Int): IntArray {
-    TODO("5 points")
+    var result = array
+    for(i in 1..runs){
+        val size = result.size
+        for (j in 0..size/2 - 1){
+            result[j] += result[size - j - 1]
+        }
+        result = result.dropLast(size/2).toIntArray()
+    }
+    return result
 }
