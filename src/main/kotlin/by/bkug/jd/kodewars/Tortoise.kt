@@ -25,5 +25,5 @@ fun race(v1: Int, v2: Int, g: Int): IntArray {
     val mn = Math.floor(minute).toInt()
     val second = (minute - minute.toInt()) * 60
     val s = Math.floor(second).toInt()
-    return intArrayOf(h, mn, s);
+    return intArrayOf(h, mn, s)
 }

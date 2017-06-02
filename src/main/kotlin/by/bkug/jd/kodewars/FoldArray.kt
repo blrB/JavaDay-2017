@@ -31,12 +31,12 @@ package by.bkug.jd.kodewars
  */
 fun foldArray(array: IntArray, runs: Int): IntArray {
     var result = array
-    for(i in 1..runs){
+    for (i in 1..runs) {
         val size = result.size
-        for (j in 0..size/2 - 1){
+        for (j in 0..size / 2 - 1) {
             result[j] += result[size - j - 1]
         }
-        result = result.dropLast(size/2).toIntArray()
+        result = result.dropLast(size / 2).toIntArray()
     }
     return result
 }

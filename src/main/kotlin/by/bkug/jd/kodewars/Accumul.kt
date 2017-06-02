@@ -12,7 +12,7 @@ package by.bkug.jd.kodewars
  */
 fun accum(s: String): String {
     var result = ""
-    s.forEachIndexed {  i, c ->
+    s.forEachIndexed { i, c ->
         val separate = if (i == 0) "" else "-"
         result += separate + c.toString().repeat(i + 1).toLowerCase().capitalize()
     }

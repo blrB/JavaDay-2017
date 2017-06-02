@@ -21,14 +21,14 @@ package by.bkug.jd.kodewars
  * in this case, it's invalid because contain a non numerical character
  */
 fun findMissingNumber(s: String): Long {
-    if (s.contains(Regex("[^ \\d\\s]"))){
+    if (s.contains(Regex("[^ \\d\\s]"))) {
         return 1
     }
-    if (s.contains(Regex("^\\s*$"))){
+    if (s.contains(Regex("^\\s*$"))) {
         return 0
     }
     val array = s.split(Regex("\\s+"))
-    for (i in array.indices){
+    for (i in array.indices) {
         val currentNumber = i + 1
         if (currentNumber != Integer.parseInt(array[i])) {
             return currentNumber.toLong()
